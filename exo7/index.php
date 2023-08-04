@@ -36,10 +36,16 @@ $isOk = false;
         <div class="text-center ">
             <p>
                 <?php
+                # Conditions
+                /* 
+                test Commentaires
+                sur 
+                plusiers lignes 
+                */
                 if ($isOk == false) {
-                    echo "C'est pas bon";
+                    echo 'C\'est pas bon';
                 } else {
-                    echo "C'est ok";
+                    echo 'C\'est ok';
                 }
                 ?>
 

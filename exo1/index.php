@@ -1,5 +1,16 @@
 <?php
 $age = 34;
+
+if ($age < 0 || $age > 100) {
+    $message = 'Entrez un âge valide';
+} else {
+    if ($age >= 18) {
+        $message = 'Vous êtes majeur';
+    } else {
+        $message = 'Vous êtes mineur';
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -35,12 +46,7 @@ $age = 34;
         <!-- Réponse -->
         <div class="d-flex justify-content-center ">
             <p>
-                <?php if ($age >= 18) {
-                    echo "Vous êtes majeur";
-                } else {
-                    echo "Vous êtes mineur";
-                }
-                ?>
+                <?= $message ?>
             </p>
         </div>
 

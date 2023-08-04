@@ -1,5 +1,42 @@
 <?php
 $magnitude = 9;
+switch ($magnitude) {
+    case 1:
+        $result = "Magnitude $magnitude, Micro-séisme impossible à ressentir.";
+        break;
+
+    case 2:
+        $result = "Magnitude $magnitude, Micro-séisme impossible à ressentir mais enregistrable par les sismomètres.";
+        break;
+
+    case 3:
+        $result = "Magnitude $magnitude, Ne cause pas de dégats mais commence à pouvoir être légèrement ressenti.";
+        break;
+
+    case 4:
+        $result = "Magnitude $magnitude, Séisme capable de faire bouger des objets mais ne causant généralement pas de dégats.";
+        break;
+
+    case 5:
+        $result = "Magnitude $magnitude, Séisme capable d'engendrer des dégats importants sur de vieux bâtiments ou bien des bâtiments présentants des défauts de construction. Peu de dégats sur des bâtiments modernes.";
+        break;
+
+    case 6:
+        $result = "Magnitude $magnitude, Fort séisme capable d'engendrer des destructions majeures sur une large distance (180 km) autour de l'épicentre.";
+        break;
+
+    case 7:
+        $result = "Magnitude $magnitude, Séisme capable de destructions majeures à modérées sur une très large zone en fonction de la distance.";
+        break;
+    case 8:
+        $result = "Magnitude $magnitude, Séisme capable de destructions majeures sur une très large zone de plusieurs centaines de kilomètres.";
+        break;
+    case 9:
+        $result = "Magnitude $magnitude, Séisme capable de tout détruire sur une très vaste zone.";
+        break;
+    default:
+        $result = 'Erreur de saisie';
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,43 +72,7 @@ $magnitude = 9;
         <!-- Réponse -->
         <div class="text-center ">
             <p>
-                <?php
-                switch ($magnitude) {
-                    case 1:
-                        echo "Magnitude $magnitude Micro-séisme impossible à ressentir.";
-                        break;
-
-                    case 2:
-                        echo "Magnitude $magnitude Micro-séisme impossible à ressentir mais enregistrable par les sismomètres.";
-                        break;
-
-                    case 3:
-                        echo "Magnitude $magnitude Ne cause pas de dégats mais commence à pouvoir être légèrement ressenti.";
-                        break;
-
-                    case 4:
-                        echo "Magnitude $magnitude Séisme capable de faire bouger des objets mais ne causant généralement pas de dégats.";
-                        break;
-
-                    case 5:
-                        echo "Magnitude $magnitude Séisme capable d'engendrer des dégats importants sur de vieux bâtiments ou bien des bâtiments présentants des défauts de construction. Peu de dégats sur des bâtiments modernes.";
-                        break;
-
-                    case 6:
-                        echo "Magnitude $magnitude Fort séisme capable d'engendrer des destructions majeures sur une large distance (180 km) autour de l'épicentre.";
-                        break;
-
-                    case 7:
-                        echo "Magnitude $magnitude Séisme capable de destructions majeures à modérées sur une très large zone en fonction de la distance.";
-                        break;
-                    case 8:
-                        echo "Magnitude $magnitude Séisme capable de destructions majeures sur une très large zone de plusieurs centaines de kilomètres.";
-                        break;
-                    case 9:
-                        echo "Magnitude $magnitude Séisme capable de tout détruire sur une très vaste zone.";
-                        break;
-                }
-                ?>
+                <?= $result ?>
 
             </p>
         </div>

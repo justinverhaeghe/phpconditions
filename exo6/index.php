@@ -1,5 +1,10 @@
 <?php
 $age = "19";
+if ($age >= 18) {
+    $result = "Tu es majeur";
+} else {
+    $result = "Tu n'es pas majeur";
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +40,7 @@ $age = "19";
         <!-- Réponse -->
         <div class="text-center ">
             <p>
-                <?php
-                if ($age >= 18) {
-                    echo "Tu es majeur";
-                } else {
-                    echo "Tu n'es pas majeur";
-                }
-                ?>
+                <?= $result ?>
 
             </p>
         </div>

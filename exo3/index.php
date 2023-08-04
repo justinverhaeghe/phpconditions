@@ -1,6 +1,18 @@
 <?php
-$age = 17;
-$gender = 'femme';
+$age = 34;
+$gender = 'homme';
+
+if (($age >= 18) && ($gender == 'homme')) {
+    $result = 'Vous êtes un homme et vous êtes majeur';
+} else if (($age >= 18) && ($gender == 'femme')) {
+    $result = 'Vous êtes une femme et vous êtes majeure';
+} else if (($age <= 18) && ($gender == 'femme')) {
+    $result = 'Vous êtes une femme et vous êtes mineure.';
+} else if (($age <= 18) && ($gender == 'homme')) {
+    $result = 'Vous êtes un homme et vous êtes mineur';
+} else {
+    $result = 'Erreur, entrez une donnée valide';
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +38,7 @@ $gender = 'femme';
     </header>
     <main>
         <!-- Consigne de l'exercice -->
-        <div class="p-5">
+        <div class="p-3">
             <p>Consigne : Créer deux variables age et gender. La variable gender peut prendre comme valeur :</p>
             <ul>
                 <li>Homme</li>
@@ -46,16 +58,7 @@ $gender = 'femme';
         <!-- Réponse -->
         <div class="d-flex justify-content-center ">
             <p>
-                <?php if (($age >= 18) and ($gender == 'homme')) {
-                    echo "Vous êtes un homme et vous êtes majeur";
-                } else if (($age >= 18) and ($gender == 'femme')) {
-                    echo "Vous êtes une femme et vous êtes majeure";
-                } else if (($age <= 18) and ($gender == 'femme')) {
-                    echo "Vous êtes une femme et vous êtes mineure";
-                } else if (($age <= 18) and ($gender == 'homme')) {
-                    echo "Vous êtes un homme et vous êtes mineur";
-                }
-                ?>
+                <?= $result ?>
             </p>
         </div>
 

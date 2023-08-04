@@ -1,5 +1,10 @@
 <?php
 $gender = "Homme";
+if ($gender != "Homme") {
+    $result = 'C\'est une développeuse !!!';
+} else {
+    $result = 'C\'est un développeur !!!';
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +40,7 @@ $gender = "Homme";
         <!-- Réponse -->
         <div class="text-center ">
             <p>
-                <?php
-                if ($gender == "Homme") {
-                    echo "C'est un développeur !!!";
-                } else {
-                    echo "C'est une développeuse !!!";
-                }
-                ?>
+                <?= $result ?>
 
             </p>
         </div>
@@ -49,7 +48,7 @@ $gender = "Homme";
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

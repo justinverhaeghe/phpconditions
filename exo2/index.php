@@ -1,6 +1,12 @@
 <?php
-$isEasy = true;
+$isEasy = false;
+if ($isEasy == true) {
+    $message = 'C\'est facile !!!';
+} else {
+    $message = 'C\'est difficile !!!';
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -36,12 +42,7 @@ $isEasy = true;
         <!-- Réponse -->
         <div class="d-flex justify-content-center ">
             <p>
-                <?php if ($isEasy == true) {
-                    echo "C'est facile !!";
-                } else {
-                    echo "C'est difficile !!!";
-                }
-                ?>
+                <?= $message ?>
             </p>
         </div>
 
